@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_GuliyevaAytaj_Bootcamp_1727556930160-pr-trigger-input-set
+  identifier: Build_GuliyevaAytaj_Bootcamp_1727556930160prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: testAIDevOps
+  pipeline:
+    identifier: Build_GuliyevaAytaj_Bootcamp_1727556930160
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
