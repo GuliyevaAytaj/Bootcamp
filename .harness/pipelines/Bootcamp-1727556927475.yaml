@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_GuliyevaAytaj_Bootcamp_1727556930160
+  name: Build Bootcamp
+  orgIdentifier: default
+  projectIdentifier: testAIDevOps
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1723509943998
+        repoName: GuliyevaAytaj/Bootcamp
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
